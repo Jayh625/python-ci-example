@@ -1,11 +1,13 @@
 import unittest
 
-from main import hello
+import main
+
 
 class MainTest(unittest.TestCase):
-    def test_hello(self):
-        self.assertEqual(hello(), "Hello World!")
+    def test_helloworld(self):
+        ret = main.helloworld("Test")
+        self.assertEqual(ret, "Hello World! Test!")
+
 
 if __name__ == "__main__":
     unittest.main()
-    
